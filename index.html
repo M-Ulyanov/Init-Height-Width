@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Элементы одной высоты и ширины</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="js/jquery.init-heightwidth.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){ 
+		$('#wrapper').initHeightWidth({
+			childElem : '.colum'
+		}); 
+	});
+
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<div class="colum">11</div>
+	<div class="colum c">11<br>11 11<br>11 11<br>11 11<br>11</div>
+	<div class="colum2">11<br>11 11</div>
+</div>
+</body>
+</html>

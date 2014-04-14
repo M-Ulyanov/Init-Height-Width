@@ -1,0 +1,39 @@
+/*Reset*/
+*{
+	margin:0;
+	padding:0;
+}
+img{
+	border:none;
+}
+input{
+	
+	border:none;
+}
+ul{
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+input,select,option{
+	outline:0;
+	border:0;
+}
+a{
+    text-decoration: none;
+}
+
+/*HTML5*/
+header, article, nav, footer, section{
+   display:block;
+}
+.c{
+	
+}
+.colum, .colum2 {
+	background:#f7f7f7;
+	width: 100px;
+	margin: 10px;
+	float: left;
+}
