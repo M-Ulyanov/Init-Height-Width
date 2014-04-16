@@ -4,10 +4,10 @@ $.fn.initHeightWidth = function(options){
 
     //Настройки по умолчанию
     var defaults = $.extend({
-	  oneHeight : true,
-	  oneWidth : null,
-      	  childElem : null,
-     }, options);
+  	  oneHeight : true,
+  	  oneWidth : null,
+      childElem : null,
+    }, options);
 
    return this.each(function(){
 
@@ -87,7 +87,7 @@ $.fn.initHeightWidth = function(options){
       };
     });
 
-   };
+  };
 
 })(jQuery)
 
