@@ -85,9 +85,9 @@ $.fn.initHeightWidth = function(options){
             width = currentWidth; 
         };
       };
-		});
+    });
 
-	};
+   };
 
 })(jQuery)
 
