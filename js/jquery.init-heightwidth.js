@@ -1,15 +1,15 @@
 (function($){
 
-	$.fn.initHeightWidth = function(options){
+$.fn.initHeightWidth = function(options){
 
     //Настройки по умолчанию
-		var defaults = $.extend({
-	    oneHeight : true,
-      oneWidth : null,
-      childElem : null,
-   	}, options);
+    var defaults = $.extend({
+	  oneHeight : true,
+	  oneWidth : null,
+      	  childElem : null,
+     }, options);
 
-   	return this.each(function(){
+   return this.each(function(){
 
       //Определение переменных
       var param = 0;
