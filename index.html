@@ -8,18 +8,38 @@
 <script src="js/jquery.init-heightwidth.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(function(){ 
-		$('#wrapper').initHeightWidth({
+		$('#block-1').initHeightWidth();
+
+		$('#block-2').initHeightWidth({
 			childElem : '.colum'
-		}); 
+		});  
 	});
 
 </script>
 </head>
 <body>
 <div id="wrapper">
-	<div class="colum">11</div>
-	<div class="colum c">11<br>11 11<br>11 11<br>11 11<br>11</div>
-	<div class="colum2">11<br>11 11</div>
+<h2>
+	Вызов плагина без параметров.По умолчанию высота всех
+	потомков для вызванного элемента выравнивается по максимальной.
+</h2>
+<div id="block-1">
+	<div class="colum">Первый блок</div>
+	<div class="colum">Второй блок с  небольшим текстом в несколько строк</div>
+	<div class="colum-2">
+		"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+	</div>
+</div>
+<h2>
+	Вызов плагина c уточнение, для каких именно потомков применить плагин.Выбраны первые два элемента, объединенные одним классом.
+</h2>
+<div id="block-2">
+	<div class="colum">Первый блок</div>
+	<div class="colum">Второй блок с  небольшим текстом в несколько строк</div>
+	<div class="colum-2">
+		"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	</div>
+</div>
 </div>
 </body>
 </html>

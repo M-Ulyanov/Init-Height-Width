@@ -2,88 +2,89 @@
 
 	$.fn.initHeightWidth = function(options){
 
+    //Настройки по умолчанию
 		var defaults = $.extend({
-	    oneHeight : false,
-      oneWidth : true,
+	    oneHeight : true,
+      oneWidth : null,
       childElem : null,
-   	 	}, options);
+   	}, options);
 
    	return this.each(function(){
 
-        var choiceChild = $(this).find(defaults.childElem);
-        var allChild = $(this).children();
+      //Определение переменных
+      var param = 0;
+      var choiceChild = $(this).find(defaults.childElem);
+      var allChild = $(this).children();
 
-		  if(defaults.oneHeight){
-        var height = 0;
-
-        if(!defaults.childElem){
-          $(allChild).each(function(){
-            var thisHeight = $(this).height();
-            matchHeight(thisHeight);
-        });
-        }
-        else{
-          $(choiceChild).each(function(){
-            var thisHeight = $(this).height();
-            matchHeight(thisHeight);
-        });
-        }
-
-        if(!defaults.childElem){
-          $(allChild).css({
-          'height': height,
-          }); 
-        }
-        else{
-          $(choiceChild).css({
-          'height': height,
-          });
-        }
-      }
+      //Проверка параметров
       if(defaults.oneWidth){
-        var width = 0;
+        var width = 0; 
+        param++;
+      };
+      if(defaults.oneHeight){
+        var height = 0;
+        param++;
+      };
+
+      //Вызов ошибки
+      if(param < 1) errorMessage();
+
+      //Ветка для всех потомков
+      if(!defaults.childElem){
+        if(defaults.oneWidth){
+          $(allChild).each(function(){
+            matchWidth($(this).width());
+          })
+          .css({
+            'width': width,
+          });
+        };
+        if(defaults.oneHeight){
+            $(allChild).each(function(){
+            matchHeight($(this).height());
+        })
+        .css({
+          'height': height,
+          }); 
+        }; 
       }
 
-      if(!defaults.childElem){
-          $(allChild).each(function(){
-            var thisWidth = $(this).width();
-            matchWidth(thisWidth);
-        });
-        }
-
-        else{
+      //Ветка только для выбранных
+      else{      
+        if(defaults.oneWidth){
           $(choiceChild).each(function(){
-            var thisWidth = $(this).width();
-            matchWidth(thisWidth);
-        });
-        }
-
-        if(!defaults.childElem){
-          $(allChild).css({
-          'width': width,
-          }); 
-        }
-        else{
-          $(choiceChild).css({
-          'width': width,
+            matchWidth($(this).width());
+          })
+          .css({
+            'width': width,
           });
-        }
+        };
+        if(defaults.oneHeight){
+          $(choiceChild).each(function(){
+          matchHeight($(this).height());
+        })
+        .css({
+          'height': height,
+          }); 
+        }; 
+      };
 
-      if(!defaults.oneHeight && !defaults.oneWidth){
+      //Функции плагина
+      function errorMessage(){
         alert('Сообщение плагина: initHeightWidth\nВозникла ошибка!\nНеобходимо указать хотя бы один из параметров в true!')
       }
 
       function matchHeight(currentHeight){
         if(currentHeight > height){
             height = currentHeight; 
-          };
         };
+      };
 
       function matchWidth(currentWidth){
         if(currentWidth > width){
             width = currentWidth; 
-          };
         };
+      };
 		});
 
 	};
@@ -91,4 +92,3 @@
 })(jQuery)
 
 
-//Ну вроде работает!
