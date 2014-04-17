@@ -30,15 +30,6 @@ header, article, nav, footer, section{
 }
 
 /*STYLE*/
-#wrapper{
-	width: 960px;
-	margin: 0 auto;
-	font-family: Verdana;
-}
-#h1-wrap{
-	background: rgb(247, 247, 247);
-	margin-bottom: 20px;
-}
 body{
 	background: rgb(240, 240, 240);
 }
@@ -49,6 +40,15 @@ body h1{
 	font-size: 20px;
 	padding: 10px;
 	line-height: 24px;
+}
+#h1-wrap{
+	background: rgb(247, 247, 247);
+	margin-bottom: 20px;
+}
+#wrapper{
+	width: 960px;
+	margin: 0 auto;
+	font-family: Verdana;
 }
 #wrapper h2{
 	font-family: 'Open Sans', sans-serif;
