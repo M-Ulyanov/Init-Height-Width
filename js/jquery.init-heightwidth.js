@@ -87,7 +87,7 @@ $.fn.initHeightWidth = function(options){
       };
     });
 
-  };
+};
 
 })(jQuery)
 

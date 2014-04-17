@@ -29,12 +29,78 @@ header, article, nav, footer, section{
    display:block;
 }
 
-/**/
+/*STYLE*/
+#wrapper{
+	width: 960px;
+	margin: 0 auto;
+	font-family: Verdana;
+}
+#h1-wrap{
+	background: rgb(247, 247, 247);
+	margin-bottom: 20px;
+}
+body{
+	background: rgb(240, 240, 240);
+}
+body h1{
+	font-family: 'Open Sans', sans-serif;
+	width: 960px;
+	margin: 0 auto;
+	font-size: 20px;
+	padding: 10px;
+	line-height: 24px;
+}
+#wrapper h2{
+	font-family: 'Open Sans', sans-serif;
+	background: #2B2B2B;
+	padding: 10px;
+	margin-bottom: 15px;
+	color: #FFF;
+	font-size: 16px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 1px 1px 5px #000;
+    -webkit-box-shadow: 1px 1px 5px #000;
+    box-shadow: 1px 1px 5px #000;
+}
+#wrapper > div{
+	overflow: hidden;
+	margin-bottom: 35px;
+}
+#wrapper > div > div{
+	padding: 10px;
+	border: 3px solid #2B2B2B;
+	background: rgb(125, 199, 241);
+	margin: 10px;
+}
+#wrapper > div > div:first-child{
+	margin-left: 0;
+}
 #block-1 > div,
 #block-2 > div{
-	background: red;
 	float: left;
 	width: 100px;
-	margin: 10px;
+}
+
+#block-3{
+	text-align: center;
+}
+#block-3 > div{
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+#foot{
+	background: rgb(226, 226, 226);
 	padding: 10px;
+	text-align: center;
+}
+#foot a{
+	color: #000;
+	text-decoration: underline;
+	font-weight: bold;
+}
+#foot a:hover{
+	color: #363636;
 }
